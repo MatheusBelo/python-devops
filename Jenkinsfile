@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-    python 'python' //ou java
+    maven 'maven' //ou java
   } 
   stages {
       stage ('Instalar dependências') {
