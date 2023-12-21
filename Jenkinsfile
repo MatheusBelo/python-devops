@@ -6,10 +6,10 @@ pipeline {
   stages {
       stage ('Instalar dependências') {
           steps {
-          sh 'sudo apt-get install python3.9 -y'
-          sh 'sudo apt-get update'
+          sh 'apt-get install python3.9 -y'
+          sh 'apt-get update'
           sh 'python3 --version'
-          sh 'sudo apt-get install python-pip'
+          sh 'apt-get install python-pip'
           sh 'pip --version'
           sh 'pip install pyinstaller' //instalar o pyinstaller pyinstaller –onefile Gabarito.py
           }
