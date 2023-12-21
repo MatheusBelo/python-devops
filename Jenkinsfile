@@ -6,6 +6,9 @@ pipeline {
   stages {
       stage ('Instalar dependências') {
           steps {
+          sh 'rm /var/lib/dpkg/lock'
+          sh 'rm /var/cache/apt/archives/lock'
+          sh 'rm /var/lib/apt/lists/lock'
           sh 'apt-get install python3.9 -y'
           sh 'apt-get update'
           sh 'python3 --version'
