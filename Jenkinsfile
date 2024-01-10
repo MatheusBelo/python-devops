@@ -6,7 +6,7 @@ pipeline {
   stages {
       stage ('Instalar dependências') {
           steps {
-          sh 'chown -R 27 /jenkins_home'
+          sh 'chown -R 27 /var/jenkins_home/workspace/Python@tmp/durable-2b852bc6'
           pysh 'sudo apt-get install python3.9 -y'
           sh 'sudo apt-get update'
           sh 'python3 --version'
