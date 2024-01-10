@@ -7,7 +7,7 @@ pipeline {
       stage ('Instalar dependências') {
           steps {
           pysh 'apt-get install python3.9 -y'
-          sh 'apt-get update'
+          sh 'sudo apt-get update'
           sh 'python3 --version'
           sh 'apt-get install python-pip'
           sh 'pip --version'
